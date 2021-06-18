@@ -1,0 +1,23 @@
+[
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "APPL",
+    "capitalization": 25637191.90,
+    "circulating_stocks": 6219,
+    "stock_price": 1456
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "TSLA",
+    "capitalization": 6784329.59,
+    "circulating_stocks": 3451,
+    "stock_price": 5167
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "DIS",
+    "capitalization": 9030202.90,
+    "circulating_stocks": 1527,
+    "stock_price": 7849
+  }
+]

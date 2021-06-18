@@ -17,16 +17,16 @@ Inventory.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-          model: 'user',
-          key: 'user_id'
+        model: 'user',
+        key: 'user_id'
       }
-  },
+    },
     product_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'product',
-          key: 'id'
-        }
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
+        key: 'id'
+      }
     },
     entry_price: {
       type: DataTypes.DECIMAL,
@@ -46,7 +46,7 @@ Inventory.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'inventory',
   }
 );
 

@@ -1,11 +1,17 @@
 [
   {
-    "name": "Example 1"
+    "user_name": "Jose Daniel Rubio",
+    "user_email": "daniel@hotmail.com",
+    "password": "password12345"
   },
   {
-    "name": "Example 2"
+    "user_name": "Victor Vallejo",
+    "user_email": "victor@hotmail.com",
+    "password": "password12345"
   },
   {
-    "name": "Example 3"
+    "user_name": "Carlos Brito",
+    "user_email": "carlos@hotmail.com",
+    "password": "password12345"
   }
 ]

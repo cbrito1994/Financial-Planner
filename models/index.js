@@ -27,16 +27,16 @@ User.belongsToMany(Products, {
     through: {
         model: Inventory,
         foreignKey: 'user_id'
-      }
+    }
 })
 
 Products.belongsToMany(User, {
     through: {
         model: Inventory,
-        foreignKey: 'id'
-      }
+        foreignKey: 'user_id'
+    }
 })
 
 
 
-module.exports = { Example };
+module.exports = { User, Products, Inventory, Wallet };

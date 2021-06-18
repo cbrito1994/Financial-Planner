@@ -17,14 +17,13 @@ Wallet.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-          model: 'user',
-          key: 'user_id'
+        model: 'user',
+        key: 'user_id'
       }
-  },
+    },
     credit: {
-        type: DataTypes.DECIMAL,
-        allowNull: true
-       
+      type: DataTypes.DECIMAL,
+      allowNull: true
     },
     debit: {
       type: DataTypes.DECIMAL,

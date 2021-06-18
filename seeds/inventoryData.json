@@ -1,0 +1,20 @@
+[
+  {
+    "user_id": 1,
+    "entry_price": 100.10,
+    "owned_stocks": 20,
+    "inventory_valuation": 123.45
+  },
+  {
+    "user_id": 2,
+    "entry_price": 247.90,
+    "owned_stocks": 12,
+    "inventory_valuation": 287.47
+  },
+  {
+    "user_id": 3,
+    "entry_price": 512.78,
+    "owned_stocks": 6,
+    "inventory_valuation": 573.90
+  }
+]

@@ -18,20 +18,20 @@ Products.init(
       allowNull: false
     },
     ticker_symbol: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     capitalization: {
-        type: DataTypes.DECIMAL,
-        allowNull: false
+      type: DataTypes.DECIMAL,
+      allowNull: false
     },
     circulating_stocks: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
     stock_price: {
-        type: DataTypes.DECIMAL,
-        allowNull: false
+      type: DataTypes.DECIMAL,
+      allowNull: false
     }
   },
   {
