@@ -1,4 +1,19 @@
-<h1>Put content here.</h1>
-{{#each examples as |example|}}
-  <p>{{example.name}}</p>
+{{#each products as |product|}}
+<div class="financial_products">
+  <h2>
+    {{{category_name}}}
+  </h2>
+  <h2>
+    {{{ticker_symbol}}}
+  </h2>
+  <h2>
+    {{{capitalization}}}
+  </h2>
+  <h2>
+    {{{circulating_stocks}}}
+  </h2>
+  <h2>
+    {{{stock_price}}}
+  </h2>
+</div>
 {{/each}}

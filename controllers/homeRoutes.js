@@ -5,23 +5,24 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all examples 
-    const stocksData = await Products.findAll();
+    const ProductData = await Products.findAll();
 
     // Serialize data so the template can read it
-    const stocks = stocksData.map((stock) => stock.get({ plain: true }));
+    const products = ProductData.map((product) => product.get({ plain: true }));
 
     // Pass serialized data
     res.render('homepage', { 
-      stocks, 
+      products, 
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/login', withAuth, (req, res) => {
+router.get('/login',  (req, res) => {
+  console.log('login');
   if (req.session.logged_in) {
-    res.redirect('/dashboard');
+    res.redirect('/');
     return;
   }
   res.render('login');
@@ -29,6 +30,11 @@ router.get('/login', withAuth, (req, res) => {
 
 router.get('/signup', (req, res) => {
   res.render('signup');
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
 });
 
 module.exports = router;

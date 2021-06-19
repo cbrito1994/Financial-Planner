@@ -1,0 +1,32 @@
+<div>
+<h1> Welcome, {{{user_name}}}!</h1>
+</div>
+<div>
+    <h1>Hello, {{{user_name}}} to your wallet</h1>
+    {{#each wallets as |wallet|}}
+<div class="wallet">
+  <h2>
+      This is your total credit:
+    {{credit}}
+  </h2>
+  <h2>
+      This is your total credit:
+    {{debit}}
+  </h2>
+  <h2>
+        Total balance saved!
+    {{balance}}
+  </h2>
+</div>
+{{/each}}
+</div>
+
+
+    {{#each inventories as |inventory|}}
+<div class="inventory">
+  <h2>
+   {{owned_stock}}
+  </h2>
+</div>
+{{/each}}
+</div>

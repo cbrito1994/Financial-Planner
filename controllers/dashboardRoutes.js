@@ -1,41 +1,51 @@
 const router = require('express').Router();
 const { Products, Inventory, User, Wallet } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const id = req.params.id;
-    // Get all examples 
-    const inventoryData = await Inventory.findOne(id, {
+
+    const inventoryData = await Inventory.findAll(id, {
         where: {
             user_id: id
         },
         include: [
             {
-                model: User
-            }
+                model: User,
+               }
         ]
     });
 
-    const walletData = await Wallet.findOne(id, {
+    const walletData = await Wallet.findAll(id, {
         where: {
             user_id: id
         },
         include: [
             {
-                model: User
+                model: User,
+              
             }
         ]
     });
 
     // Serialize data so the template can read it
     const inventories = inventoryData.map((inventory) => inventory.get({ plain: true }));
-    const wallet = walletData.map((data) => data.get({ plain: true }));
+    const wallets = walletData.map((wallet) => wallet.get({ plain: true }));
+
+    res.render('main', { 
+   //logged_in: true
+   logged_in: req.session.logged_in
+    });
 
     // Pass serialized data
-    res.render('dashboard', { 
+    res.render('profile', { 
         inventories,
-        wallet
+        wallets,
+    
     });
+
+
   } catch (err) {
     res.status(500).json(err);
   }
