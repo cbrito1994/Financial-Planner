@@ -5,34 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/reset.css">
    <link rel="stylesheet" href="/css/style.css">
     <title>Financial Planner</title>
 </head>
 <body>
-    <header>
+    <header class="mainHeader">
         <h1> Financial Planner</h1>
         <nav>
+            <ul>
             <!-- Conditionally render login or logout links -->
        {{#if logged_in}}
-            <a href="/inventory">Stock inventory</a> |
-            <a href="/wallet">Check Account</a>
-            <a href="/operations">Buy and Sell Stocks</a>
-            <button class="no-button" id="logoutbtn">logout</button> |
+            <li><a href="/inventory">Stock inventory</a></li>|
+            <li><a href="/wallet">Check Account</a></li>
+            <li><a href="/operations">Buy and Sell Stocks</a></li>
+            <li><button class="no-button" id="logoutbtn">logout</button></li> |
              {{else}}
-            <a href="/login">login</a>
-            <a href="">Mainpage</a>
+            <li><a href="/login">login</a></li>
+            <li><a href="">Mainpage</a></li>
                {{/if}}
         </nav>
+        </ul>
     </header>
     <main>
         {{{ body }}}
     </main>
-    <footer>
-        <div>
-            <h1>Financial Planner© 2021</h1>
-            <h1>Get in contact!</h1>
-            <h1>example@gmail.com</h1>
-        </div>
-    </footer>
+ <footer id="contact" class="footer">
+         <hr class="hr">
+         <h2> Let's Talk!</h3>
+         <h4>Click on the button so we can get in touch</h4>
+         <a class="btn" href="mailto:example@gmail.com">Contact</a>
+         <h4>Financial Planner©</h4>
+
+
+
+     </footer>
 </body>
 </html>

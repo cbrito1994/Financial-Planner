@@ -1,21 +1,139 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+
+  /* Styles go here */
+
+  .hr{
+    /* position: relative;*/
+    width: 40%;
+    border-top: 3px solid;
+    border-bottom: none;
+    margin: auto;
+    text-align: center;
 }
 
+hr{
+    width: 90%;
+    border-top: 3px solid;
+    border-bottom: none;
+    margin: auto;
+    text-align: center;
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
 }
 
-;
+a{
+    text-decoration: none;
+    color:black;
+  }
 
+
+.mainHeader{
+    background-color: #CC9B6D;
+    padding-top: 10px;
+    display: flex
+};
+
+.tags{
+    display: flex;
+    flex-direction:column;
+    left: 50px;
+    
+}
+
+.mainHeader nav ul li{
+    display: inline;
+    flex-wrap: wrap;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2.5;
+}
+
+footer div ul li{
+    display: flex;
+    flex-flow:column;
+    justify-content: flex-end;
+    margin-left: 1.3rem;
+    list-style: none;
+}
+
+.no-button{
+    margin-top: 1rem;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 30px;
+    color: black;
+    font-family: Garamond;
+    font-size: 18px;
+    font-weight: 150;
+    padding: 5px;
+    background-color: #F2DAC3;
+    border: solid #F2DAC3 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
 .no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
+    background: #1E62D0;
+    border: solid #66BFBF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+.btn {
+    margin-top: 1rem;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: black;
+    font-family: Garamond;
+    font-size: 25px;
+    font-weight: 150;
+    padding: 15px;
+    background-color: #F2DAC3;
+    border: solid #F2DAC3 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+
+ .btn:hover {
+    background: #1E62D0;
+    border: solid #66BFBF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+ .footer{
+     background-color: #C8C2BC;
+     padding-bottom: 15px;
+     text-align: center;
+     font-size: 1.4rem;
+ }
+
+ main{
+     background-color: #F1CA89;
+     padding-bottom: 20px;
+ }
+
+ .section{
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ input{
+     border-radius: 2rem;
+ }
+
+ #submitbtn{
+    margin-top: 1rem;
+ }
+
+ #signupBtn{
+    margin-top: 1rem;
+ }
