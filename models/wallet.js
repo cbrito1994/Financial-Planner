@@ -6,7 +6,6 @@ class Wallet extends Model {}
 
 Wallet.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,

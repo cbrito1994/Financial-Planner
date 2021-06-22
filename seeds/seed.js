@@ -14,11 +14,19 @@ const seedDatabase = async () => {
     return: true
   });
 
+  console.log("---------------User Data Created ---------------------------------")
+
   await Products.bulkCreate(productData);
+
+  console.log("---------------Products Data Created ---------------------------------")
 
   await Wallet.bulkCreate(walletData);
 
+  console.log("---------------Wallet Data Created ---------------------------------")
+
   await Inventory.bulkCreate(inventoryData);
+
+  console.log("---------------Inventory Data Created ---------------------------------")
 
   process.exit(0);
 };

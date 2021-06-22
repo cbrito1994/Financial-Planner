@@ -14,10 +14,10 @@
         <nav>
             <!-- Conditionally render login or logout links -->
        {{#if logged_in}}
-            <a href="/profile">profile</a> |
-            <a href="">Wallet</a>
-            <a href=""> Mainpage</a>
-            <button class="no-button" id="logout">logout</button> |
+            <a href="/inventory">Stock inventory</a> |
+            <a href="/wallet">Check Account</a>
+            <a href="/operations">Buy and Sell Stocks</a>
+            <button class="no-button" id="logoutbtn">logout</button> |
              {{else}}
             <a href="/login">login</a>
             <a href="">Mainpage</a>

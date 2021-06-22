@@ -1,20 +1,46 @@
 [
   {
     "user_id": 1,
+    "product_id": 1,
     "entry_price": 100.10,
     "owned_stocks": 20,
-    "inventory_valuation": 123.45
+    "inventory_valuation": 2002.00
+  },
+
+   {
+      "user_id": 1,
+      "product_id": 2,
+      "entry_price": 70.10,
+      "owned_stocks": 20,
+      "inventory_valuation": 142.00
+    },
+
+  {
+    "user_id": 2,
+    "product_id": 1,
+    "entry_price": 247.90,
+    "owned_stocks": 12,
+    "inventory_valuation": 2974.80
   },
   {
     "user_id": 2,
-    "entry_price": 247.90,
-    "owned_stocks": 12,
-    "inventory_valuation": 287.47
+    "product_id": 3,
+    "entry_price": 150.00,
+    "owned_stocks": 200,
+    "inventory_valuation": 30000.00
   },
   {
     "user_id": 3,
-    "entry_price": 512.78,
-    "owned_stocks": 6,
-    "inventory_valuation": 573.90
+    "product_id": 3,
+    "entry_price": 150.08,
+    "owned_stocks": 600,
+     "inventory_valuation": 90048.00
+  },
+  {
+    "user_id": 3,
+    "product_id": 2,
+    "entry_price": 50.00,
+    "owned_stocks": 300,
+     "inventory_valuation": 15000.00
   }
 ]

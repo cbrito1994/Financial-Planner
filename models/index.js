@@ -23,19 +23,19 @@ Wallet.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-User.belongsToMany(Products, {
-    through: {
-        model: Inventory,
-        foreignKey: 'user_id'
-    }
-})
+// User.belongsToMany(Products, {
+//     through: {
+//         model: Inventory,
+//         foreignKey: 'user_id'
+//     }
+// })
 
-Products.belongsToMany(User, {
-    through: {
-        model: Inventory,
-        foreignKey: 'user_id'
-    }
-})
+// Products.belongsToMany(User, {
+//     through: {
+//         model: Inventory,
+//         foreignKey: 'user_id'
+//     }
+// })
 
 
 

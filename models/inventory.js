@@ -6,8 +6,7 @@ class Inventory extends Model {}
 
 Inventory.init(
   {
-    // define columns
-    id: {
+     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -23,6 +22,7 @@ Inventory.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'product',
         key: 'id'
