@@ -4,6 +4,8 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const session = require('express-session');
+var Tabulator = require('tabulator-tables');
+
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 

@@ -19,5 +19,54 @@
     "capitalization": 9030202.90,
     "circulating_stocks": 70000,
     "stock_price": 129.00
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "APPL",
+    "capitalization": 25637191.90,
+    "circulating_stocks": 640000,
+    "stock_price": 40.06
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "TSLA",
+    "capitalization": 6784329.59,
+    "circulating_stocks": 50000,
+    "stock_price": 135.69
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "DIS",
+    "capitalization": 9030202.90,
+    "circulating_stocks": 70000,
+    "stock_price": 129.00
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "APPL",
+    "capitalization": 25637191.90,
+    "circulating_stocks": 640000,
+    "stock_price": 40.06
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "TSLA",
+    "capitalization": 6784329.59,
+    "circulating_stocks": 50000,
+    "stock_price": 135.69
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "DIS",
+    "capitalization": 9030202.90,
+    "circulating_stocks": 70000,
+    "stock_price": 129.00
+  },
+  {
+    "category_name": "stocks",
+    "ticker_symbol": "DIS",
+    "capitalization": 9030202.90,
+    "circulating_stocks": 70000,
+    "stock_price": 129.00
   }
 ]
