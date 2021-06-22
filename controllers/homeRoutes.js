@@ -101,6 +101,48 @@ withAuth,
        }
       });
    
+
+      router.get('/operations', 
+      withAuth,
+        async (req, res) => {
+          try {
+             const userData = await User.findByPk(req.session.user_id, {
+                attributes: { exclude: ['password'] },
+               });
+      
+              const walletData = await Wallet.findOne({
+                where: { user_id : req.session.user_id },
+              //  include: [ { model : Products },]
+              });
+
+              const InventoryData = await Inventory.findAll({
+                where: { user_id : req.session.user_id },
+              //  include: [ { model : Products },]
+              });
+          
+              const ProductData = await Products.findAll();
+            
+              const products = ProductData.map((product) => product.get({ plain: true }));
+              const user = userData.get({ plain: true });
+              const wallet = walletData.get({ plain: true });
+              const inventories = InventoryData.map((inventory) => inventory.get({ plain: true }));
+   
+              res.render('operations', {
+                ...user,
+                ...wallet,
+                inventories,
+                products,
+                logged_in: true
+              });
+      
+      
+          } catch (err) {
+            console.log(err);
+            res.status(500).json(err);
+          }
+         });
+      
+          
    
 
 module.exports = router;

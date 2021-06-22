@@ -34,6 +34,32 @@ const passwordInfo = passwordbtn.value;
       .addEventListener('submit', loginFormHandler);
     
 
-
+      async function signupFormHandler(event) {
+        event.preventDefault();
+    
+        const name = document.querySelector('#namebtn').value.trim();
+        const email = document.querySelector('#emailLogin').value.trim();
+        const password = document.querySelector('#passwordLogin').value.trim();
+    
+        if (name && email && password) {
+            const response = await fetch('/api/user', {
+                method: 'POST',
+                body: JSON.stringify({
+                    user_name : name,
+                    user_email : email,
+                    password : password
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            if (response.ok) {
+                console.log('success');
+         
+            } else {
+                alert(response.statusText);
+            }
+        }
+    }
+    
+    document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 
 
