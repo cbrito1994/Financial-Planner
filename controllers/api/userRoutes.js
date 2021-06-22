@@ -51,16 +51,19 @@ router.post('/login', async (req, res) => {
     });
 
     router.post('/logout', (req, res) => {
-      if (req.session.logged_in) {
+      console.log(req.session.logged_in)
+      if (req.session.logged_in == true) {
         req.session.destroy(() => {
           res.status(204).end();
         });
         console.log("you are logged out");
       } else {
         res.status(404).end();
+        console.log(res)
       }
     });
       } catch (err) {
+        console.log(err)
     res.status(400).json(err);
   }
 });
