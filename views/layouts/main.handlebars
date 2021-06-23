@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/reset.css">
    <link rel="stylesheet" href="/css/style.css">
+   <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Financial Planner</title>
 </head>
 <body>
     <header class="mainHeader">
         <h1> Financial Planner</h1>
         <nav>
-            <ul>
+            <ul class="navbar">
             <!-- Conditionally render login or logout links -->
        {{#if logged_in}}
-            <li><a href="/inventory">Stock inventory</a></li>|
+            <li><a href="/inventory">Stock inventory</a></li>
             <li><a href="/wallet">Check Account</a></li>
             <li><a href="/operations">Buy and Sell Stocks</a></li>
-            <li><button class="no-button" id="logoutbtn">logout</button></li> |
+            <li><button class="no-button" id="logoutbtn">Logout</button></li> 
              {{else}}
-            <li><a href="/login">login</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a href="">Mainpage</a></li>
                {{/if}}
         </nav>
