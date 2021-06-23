@@ -29,9 +29,25 @@
     {{inventory_valuation}}
     <p><button>Sell</button></p>
     </h2>
-{{/each}}
+
 </div>
 
-<script src="/js/operations.js"></script>
+<div id="operations-table"></div>
+
+<script>
+var tabledata = [
+    {id:1, Debit:{{category_name}}, Credit: {{ticker_symbol}}, Balance:{{capitalization}},},
+  
+];
+
+//define table
+var table = new Tabulator("#operations-table", {
+    data:tabledata,
+    autoColumns:true,
+});
+</script>
+
+{{/each}}
+{{!-- <script src="/js/operations.js"></script> --}}
 
 </div>

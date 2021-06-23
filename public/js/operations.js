@@ -1,4 +1,3 @@
-var Tabulator = require('../../server');
 
 
 //define data

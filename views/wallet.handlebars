@@ -3,8 +3,34 @@
 <div class="col-auto">
     <h2>Welcome, {{user_name}}!</h2>
   </div>
+  <div class="img1">
+    <h2>Here you can check your balance and know how much money you have and how much you spent</h2>
+    <img class="img2" src="/img/download-1.jpg" alt="">
+  </div>
 <div class="wallet">
  <h2>
    {{balance}}
     </h2>
      </div>
+
+<div id="wallet-table"></div>
+
+
+<script>
+
+//define data
+var tabledata = [
+    {id:1, Debit:{{debit}}, Credit: {{credit}}, Balance:{{balance}},},
+    
+];
+
+//define table
+var table = new Tabulator("#wallet-table", {
+    data:tabledata,
+    autoColumns:true,
+});
+
+</script>
+
+{{!-- <script src="/js/wallet.js"></script> --}}
+
