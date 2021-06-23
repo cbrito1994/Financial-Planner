@@ -81,12 +81,13 @@ withAuth,
              where: { user_id : req.session.user_id },
            //  include: [ { model : Products },]
            });
-       
-           console.log(userData);
-           console.log(walletData);
 
            const user = userData.get({ plain: true });
            const wallet = walletData.get({ plain: true });
+
+                  
+           console.log(user);
+           console.log(wallet);
 
            res.render('wallet', {
              ...user,
