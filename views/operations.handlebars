@@ -1,52 +1,54 @@
-
 <div class="row">
-<div class="col-auto">
+  <div class="col-auto">
     <h2>Welcome, {{user_name}}!</h2>
-<div class="wallet">
- <h2>
-   {{balance}}
-    </h2>
-     </div>
+    <div class="wallet">
+      <h2>This is your balance</h2>
+      <h2>
+        {{balance}}
+      </h2>
+      <br>
+      <hr>
+    </div>
   </div>
-{{#each products as |product|}}
-<div class="financial_products">
-  <h2>
-    {{{category_name}}}
-     {{{ticker_symbol}}}
-    {{{capitalization}}}
-    {{{circulating_stocks}}}
-    {{{stock_price}}}
-    <p><button>Add to Cart</button></p>
-  </h2>
-</div>
-{{/each}}
-{{#each inventories as |inventory|}}
-<div class="Inventory">
- <h2>
-   {{product_id}}
-    {{entry_price}}
-    {{owned_stocks}}
-    {{inventory_valuation}}
-    <p><button>Sell</button></p>
+  {{#each products as |product|}}
+  <div class="financial_products">
+    <h2> {{{category_name}}} </h2>
+    <h2> {{{ticker_symbol}}} </h2>
+    <h2> {{{capitalization}}} </h2>
+    <h2> {{{circulating_stocks}}} </h2>
+    <h2> {{{stock_price}}} </h2>
+    <p><button class="financialbtn">Add to Cart</button></p>
     </h2>
-{{/each}}
-</div>
+  </div>
+  {{/each}}
+  {{#each inventories as |inventory|}}
+  <div class="Inventory">
+    <h2>
+      {{product_id}}
+      {{entry_price}}
+      {{owned_stocks}}
+      {{inventory_valuation}}
+      <p><button>Sell</button></p>
+    </h2>
+    {{/each}}
+  </div>
 
-<div id="operations-table"></div>
+  <div id="operations-table"></div>
 
-<script>
-var tabledata = [
-    {id:1, Debit:{{category_name}}, Credit: {{ticker_symbol}}, Balance:{{capitalization}},},
+  <script>
+    var tabledata = [
+      { id: 1, Debit: {{ category_name }}, Credit: { { ticker_symbol } }, Balance: { { capitalization } },},
   
 ];
 
-//define table
-var table = new Tabulator("#operations-table", {
-    data:tabledata,
-    autoColumns:true,
-});
-</script>
+    //define table
+    var table = new Tabulator("#operations-table", {
+      data: tabledata,
+      autoColumns: true,
+    });
+  </script>
 
-{{!-- <script src="/js/operations.js"></script> --}}
+  {{!--
+  <script src="/js/operations.js"></script> --}}
 
 </div>

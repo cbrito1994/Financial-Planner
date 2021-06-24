@@ -202,3 +202,22 @@ footer div ul li{
      border-radius: 5rem;
      text-align: center;
  }
+
+ .financial_products{
+     display: flex;
+     flex-direction:row;
+     justify-content: center;
+    
+ }
+
+ .financialbtn{
+     margin-left: 30px;
+     margin-top: 15px;
+ }
+
+ #wallet-table{
+     margin-top: 30px;
+     justify-content: center;
+     display:inline-block;
+     left: 600px;
+ }

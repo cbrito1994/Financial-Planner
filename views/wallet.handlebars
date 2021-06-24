@@ -8,9 +8,36 @@
     <img class="img2" src="/img/download-1.jpg" alt="">
   </div>
 <div class="wallet">
+  <h2>This is your total balance!</h2>
  <h2>
    {{balance}}
     </h2>
      </div>
+
+  <div>
+    <h2>Here you can see how much money you have spent and gain</h2>
+  </div>
+
+      <div id="wallet-table"></div>
+
+
+<script>
+ //define data
+var tabledata = [
+    {id:1, Debit:{{debit}}, Credit: {{credit}}, Balance:{{balance}},},
+];
+
+
+//define table
+var table = new Tabulator("#wallet-table", {
+    data:tabledata,
+    autoColumns:true,
+    autoResize:false,
+});
+
+
+</script>
+
+
 
 
