@@ -4,6 +4,7 @@
   p{
     font-family: 'Newsreader', serif;
     font-family: 'Playfair Display', serif;
+    margin: 1px;
   }
   
   .hr{
@@ -27,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
       display: flex;
       justify-items: right ;
       text-align: right;
-      margin-left: 300px;
+      margin-left: 200px;
   }
 
 hr{
@@ -155,6 +156,9 @@ footer div ul li{
 
 .team{
     text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 
 .images{
@@ -206,7 +210,9 @@ footer div ul li{
  .financial_products{
      display: flex;
      flex-direction:row;
-     justify-content: center;
+     justify-content:space-evenly;
+     margin-left: 25px;
+     margin-bottom: 30px;
     
  }
 
@@ -220,4 +226,106 @@ footer div ul li{
      justify-content: center;
      display:inline-block;
      left: 600px;
+ }
+
+ .titles{
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content:space-evenly;
+     margin-right: 80px;
+ }
+
+ .Inventory{
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-evenly;
+ }
+
+ .financialbtn {
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    height: 20px;
+    line-height: 0px;
+    color: #000000;
+    font-family: Times New Roman;
+    width: 137px;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #F9F9F9;
+    -webkit-box-shadow: 1px 0 4px 0 #FFFFFF;
+    -moz-box-shadow: 1px 0 4px 0 #FFFFFF;
+    box-shadow: 1px 0 4px 0 #FFFFFF;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+ 
+ .financialbtn:hover {
+    background: #C2C9D4;
+    border: solid #FFFFFF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+#gain{
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+#spent{
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+ .wallet-form{
+     margin-top: 30px;
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: center;
+ }
+ 
+.btndiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+ #walletBtn{
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    height: 20px;
+    line-height: 0px;
+    color: #000000;
+    font-family: Times New Roman;
+    width: 137px;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #F9F9F9;
+    -webkit-box-shadow: 1px 0 4px 0 #FFFFFF;
+    -moz-box-shadow: 1px 0 4px 0 #FFFFFF;
+    box-shadow: 1px 0 4px 0 #FFFFFF;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+   
+ }
+ 
+ #walletBtn:hover {
+    background: #C2C9D4;
+    border: solid #FFFFFF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
  }

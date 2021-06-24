@@ -10,7 +10,7 @@
 <div class="wallet">
   <h2>This is your total balance!</h2>
  <h2>
-   {{balance}}
+   $ {{balance}}
     </h2>
      </div>
 
@@ -20,11 +20,30 @@
 
       <div id="wallet-table"></div>
 
+    <div>
+    <h1>Have you spent or gain any money? <br> Put it here and start controlling your finance!</h1>
+
+    <form class="wallet-form">
+    <h2>Gain (debit):</h2>
+    <input id = "gain" type="number">
+    <h2> Spent (credit):</h2>
+    <input id="spent" type="number">
+    <br>
+
+</form>
+<div class="btndiv">
+    <button id = "walletBtn" type="submit"> Submit</button>
+</div>
+
+
+
+  </div>
+
 
 <script>
  //define data
 var tabledata = [
-    {id:1, Debit:{{debit}}, Credit: {{credit}}, Balance:{{balance}},},
+    {id:1, Debit: {{debit}}, Credit: {{credit}}, Balance:{{balance}},},
 ];
 
 
