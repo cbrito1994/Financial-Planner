@@ -29,6 +29,16 @@ router.get('/login',  (req, res) => {
   res.render('login');
 });
 
+router.get('/tips', (req, res) => {
+  res.render('tips');
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('tips');
+
+});
+
 router.get('/signup', (req, res) => {
   res.render('signup');
   if (req.session.logged_in) {
