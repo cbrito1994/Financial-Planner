@@ -42,7 +42,7 @@ const passwordInfo = passwordbtn.value;
         const password = document.querySelector('#passwordLogin').value.trim();
     
         if (name && email && password) {
-            const response = await fetch('/api/user', {
+            const response = await fetch('/api/user/signup', {
                 method: 'POST',
                 body: JSON.stringify({
                     user_name : name,
@@ -53,6 +53,7 @@ const passwordInfo = passwordbtn.value;
             });
             if (response.ok) {
                 console.log('success');
+                 alert(" Successfully signup, please login");
          
             } else {
                 alert(response.statusText);
