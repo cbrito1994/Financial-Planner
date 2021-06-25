@@ -6,9 +6,6 @@ submit.addEventListener('click', () =>{
     const spentInfo = spendbtn.value
     let balances = 0;
     balances = Number(gainInfo)+ Number(spentInfo);
-    console.log(balances)
-    console.log(gainInfo)
-    console.log(spentInfo)
     fetch("/api/wallet/update", {
         method: 'PUT',
         body: JSON.stringify({
@@ -22,6 +19,7 @@ submit.addEventListener('click', () =>{
     }).then(response => {
         return response.json()
     }).then(data =>{
+        document.location.replace('/wallet');
     console.log(data.ok)
      })
 })

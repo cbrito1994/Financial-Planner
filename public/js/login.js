@@ -54,8 +54,7 @@ const passwordInfo = passwordbtn.value;
             if (response.ok) {
                 console.log('success');
                  alert(" Successfully signup, please login");
-         
-            } else {
+               } else {
                 alert(response.statusText);
             }
         }

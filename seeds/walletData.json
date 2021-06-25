@@ -1,20 +1,20 @@
 [
   {
     "user_id": 1,
-    "credit": 50000.00,
-    "debit": 2000.00,
+    "debit": 50000.00,
+    "credit": 2000.00,
     "balance": 48000.00
   },
   {
     "user_id": 2,
-    "credit": 70000.00,
-    "debit": 3000.00,
+    "debit": 70000.00,
+    "credit": 3000.00,
     "balance": 67000.00
   },
   {
     "user_id": 3,
-    "credit": 80000.00,
-    "debit": 10000.00,
+    "debit": 80000.00,
+    "credit": 10000.00,
     "balance": 70000.00
   }
 ]

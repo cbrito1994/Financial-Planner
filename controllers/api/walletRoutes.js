@@ -49,15 +49,15 @@ router.get('/',
       where: { product_id : req.body.product_id}
      });
 
-     const selldebit = inventoryID.inventory_valuation;
+     const selldebit = inventoryID.inventory_valuation*1;
 
      const walletwallet = await Wallet.findOne({
       where: { user_id : req.session.user_id}
      });
   
       const walletData = await Wallet.update({
-            debit : selldebit*1 + walletwallet.debit*1,
-            balance : walletwallet.balance*1  + selldebit.debit*1,
+            debit : walletwallet.debit*1 +selldebit,
+            balance : walletwallet.balance*1  + selldebit,
        },
       {where: { user_id : req.session.user_id}},
       );
