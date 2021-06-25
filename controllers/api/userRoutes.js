@@ -10,11 +10,36 @@ router.post('/signup', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
+        
       res.status(200).json(userData);
     });
-  } catch (err) {
+
+
+ const useruserData = await User.findOne({
+   where : { user_email: req.body.user_email}
+ })
+
+      
+  const walletData = await Wallet.create({
+       user_id : useruserData.user_id,
+       credit : 0,
+       debit : 0,
+       balance :0
+   });
+
+   const inventoryData = await Inventory.create({
+     user_id : useruserData.user_id,
+  product_id : 1,
+  entry_price : 0,
+  owned_stocks : 0,
+  inventory_valuation : 0
+   });
+  
+  } 
+   
+  catch (err) {
     res.status(400).json(err);
+    console.log(err)
   }
 });
 

@@ -20,6 +20,63 @@ router.get('/',
    }
   });
 
+  router.put('/update', withAuth, async (req, res) => {
+    try {
+   const walletwallet = await Wallet.findOne({
+    where: { user_id : req.session.user_id}
+   });
+
+    const walletData = await Wallet.update({
+          credit : req.body.credit*1 + walletwallet.credit*1,
+          debit : req.body.debit*1 + walletwallet.debit*1,
+          balance : walletwallet.balance*1 - req.body.credit*1 + req.body.debit*1,
+     },
+    {where: { user_id : req.session.user_id}},
+    );
+
+    res.status(200).json(walletData);
+    } catch (err) {
+      console.log(err);
+        res.status(500).json(err);
+      }
+    });
+
+
+
+    router.put('/sell', withAuth, async (req, res) => {
+      try {
+     const inventoryID = await Inventory.findOne({
+      where: { product_id : req.body.product_id}
+     });
+
+     const selldebit = inventoryID.inventory_valuation;
+
+     const walletwallet = await Wallet.findOne({
+      where: { user_id : req.session.user_id}
+     });
+  
+      const walletData = await Wallet.update({
+            debit : selldebit*1 + walletwallet.debit*1,
+            balance : walletwallet.balance*1  + selldebit.debit*1,
+       },
+      {where: { user_id : req.session.user_id}},
+      );
+
+      const inventoryDist = await Inventory.destroy({
+        where: { product_id : req.body.product_id}
+       });
+  
+      } catch (err) {
+        console.log(err);
+          res.status(500).json(err);
+        }
+      });
+  
+
+
+
+
+
   router.get('/getWallet', 
    withAuth,
      async (req, res) => {
@@ -27,6 +84,9 @@ router.get('/',
           const userData = await User.findByPk(req.session.user_id, {
              attributes: { exclude: ['password'] },
             });
+
+         
+       
    
            const walletData = await Wallet.findOne({
              where: { user_id : req.session.user_id },

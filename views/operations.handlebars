@@ -36,7 +36,19 @@
       {{owned_stocks}}
       {{inventory_valuation}}
       <p><button class="buybtn">Sell</button></p>
+      <div id="wallet-table"></div>
+    <div>
+    <h1>Sell your stocks!</h1>
+    <form class="inventory-form">
+    <h2>Sell:</h2>
+    <input id = "sell" type="number">
+</form>
+<div class="btndiv">
+    <button id = "selltBtn" type="submit"> Submit</button>
+</div>
     </h2>
+    </form>
+
     {{/each}}
   </div>
 
@@ -55,7 +67,7 @@
     });
   </script>
 
-  {{!--
-  <script src="/js/operations.js"></script> --}}
+
+  <script src="/js/operations.js"></script>
 
 </div>
