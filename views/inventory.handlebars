@@ -6,12 +6,23 @@
 
 <h2>This is your Stock Inventory</h2>
 <h3>Here you can see hoy many stocks you own, the entry price you got and the total inventory valuation (amazing, right?)</h3>
+ <div class="titles">
+    
+    <h3>Id</h3>
+    <h3> Entry Price</h3>
+    <h3>Owned Stocks</h3>
+    <h3> Inventory Valuation</h3>
+    
+  </div>
 {{#each inventories as |inventory|}}
-<div class="Inventory">
 
-    <h2>{{product_id}} </h2>
-   <h2> {{entry_price}} </h2>
-    <h2>{{owned_stocks}} </h2>
-    <h2>{{inventory_valuation}} </h2>
+<div class="financial_products">
+
+    <h2>{{product_id}} </h2> <br>
+   <h2> $ {{entry_price}} </h2> <br> 
+    <h2>{{owned_stocks}} </h2> <br>
+    <h2> $ {{inventory_valuation}} </h2> <br>
+   
+  </div>
+   <hr class="hr1">
 {{/each}}
-</div>

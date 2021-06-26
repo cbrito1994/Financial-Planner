@@ -237,8 +237,9 @@ footer div ul li{
 
  .Inventory{
      display: flex;
-     flex-wrap: nowrap;
+     flex-wrap: wrap;
      justify-content: space-evenly;
+     flex-direction:row
  }
 
  .financialbtn {
@@ -290,12 +291,13 @@ footer div ul li{
      display: flex;
      flex-wrap: nowrap;
      justify-content: center;
+     margin-bottom: 30px;
  }
  
 .btndiv{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    top: 50px;
 }
 
  #walletBtn{
@@ -364,4 +366,52 @@ footer div ul li{
 
  .purchase-form{
      margin-left: 0;
+ }
+
+
+ #walletBtn:hover {
+    background: #C2C9D4;
+    border: solid #FFFFFF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+ #sellbtn{
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    height: 20px;
+    line-height: 0px;
+    color: #000000;
+    font-family: Times New Roman;
+    width: 110px;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #F9F9F9;
+    -webkit-box-shadow: 1px 0 4px 0 #FFFFFF;
+    -moz-box-shadow: 1px 0 4px 0 #FFFFFF;
+    box-shadow: 1px 0 4px 0 #FFFFFF;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+   
+ }
+
+ #sellbtn:hover {
+    background: #C2C9D4;
+    border: solid #FFFFFF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+ #numberstocks{
+     top: 50px;
+     margin-top: 30px;
+     margin-right:25px;
  }

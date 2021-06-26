@@ -32,14 +32,13 @@
   <hr class="hr1">
   {{/each}}
   {{#each inventories as |inventory|}}
+ 
   <div class="Inventory">
+    
     <h2>
-      {{product_id}}
-      {{entry_price}}
-      {{owned_stocks}}
       {{inventory_valuation}}
        <div>
-    <h1>Sell your stocks!</h1>
+    <h3>Sell your stocks!</h3>
 <form class="sell-form">
 <div class="btndiv">
     <button id = "sellbtn" type="submit" value=" {{product_id}}"> Submit</button>
