@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Financial Planner
 
 ## App Description
@@ -22,3 +23,6 @@ When you click on the "Buy and Sell Stocks" menu, the app will take you to the p
 
 ## Link to the app
 https://limitless-wildwood-19082.herokuapp.com/
+=======
+
+>>>>>>> cacb00b5a900c56d7a422f7e49c33527e7b6f781
