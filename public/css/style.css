@@ -329,3 +329,39 @@ footer div ul li{
     border-radius: 20px;
     text-decoration: none;
  }
+
+ #purchaseBtn{
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    height: 20px;
+    line-height: 0px;
+    color: #000000;
+    font-family: Times New Roman;
+    width: 110px;
+    font-size: 13px;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #F9F9F9;
+    -webkit-box-shadow: 1px 0 4px 0 #FFFFFF;
+    -moz-box-shadow: 1px 0 4px 0 #FFFFFF;
+    box-shadow: 1px 0 4px 0 #FFFFFF;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+   
+ }
+
+ #purchaseBtn:hover {
+    background: #C2C9D4;
+    border: solid #FFFFFF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+ .purchase-form{
+     margin-left: 0;
+ }
